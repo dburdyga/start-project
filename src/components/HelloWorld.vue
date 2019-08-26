@@ -23,6 +23,7 @@
   import axios from 'axios';
   import {mapGetters} from 'vuex';
   import {GET_LOADING_STATE} from '@/store/loading/getter-types';
+
   export default Vue.extend({
     props: {
       msg: String,
@@ -42,6 +43,7 @@
       axios.get('https://jsonplaceholder.typicode.com/posts')
               .then (function(res) {
                 self.posts = res.data;
+                // Коллбэк относится к переменной `self`, значением которой является ожидаемый объект.
                 // eslint-disable-next-line no-console
                 console.log('Data: ', res.data);
               })

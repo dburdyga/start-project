@@ -1,6 +1,6 @@
 import axios from 'axios';
-import store from '../../store';
-import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from '../../store/loading/mutation-types';
+import store from '../store';
+import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from '../store/loading/mutation-types';
 
 axios.interceptors.request.use((config) => {
     store.commit(INCREMENT_LOADING_STATE, Date.now());
