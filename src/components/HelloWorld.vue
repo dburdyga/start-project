@@ -30,16 +30,18 @@
     },
     data() {
       return {
+        // входные параметры
         posts: [],
       };
     },
     computed: {
-      // смешиваем результат mapGetters с внешним объектом computed
+      // геттер вычисляемого значения, смешиваем результат mapGetters с внешним объектом computed
       ...mapGetters({
         loading: GET_LOADING_STATE,
-      }), 
+      }),
     },
     created() {
+      // обработка опций завершена, есть доступ к свойствам data
       const self = this;
       axios.get('https://jsonplaceholder.typicode.com/posts')
               .then (function(res) {
