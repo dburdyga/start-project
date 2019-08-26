@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <b-loading />
+      <b-loading :active.sync="loading"/>
   </div>
 </template>
 
