@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld msg="Request using Axios"/>
   </div>
 </template>
 
@@ -26,4 +26,19 @@ export default Vue.extend({
   color: #2c3e50;
   margin-top: 60px;
 }
+.logo {
+  height: 125px;
+}
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
 </style>
+
+
