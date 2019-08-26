@@ -20,7 +20,6 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import axios from 'axios';
   import {mapGetters} from 'vuex';
   import {GET_LOADING_STATE} from '@/store/loading/getter-types';
   export default Vue.extend({
@@ -37,19 +36,11 @@
         loading: GET_LOADING_STATE,
       }),
     },
-    created() {
-      const self = this;
-      axios.get('https://jsonplaceholder.typicode.com/posts')
-              .then (function(res) {
-                self.posts = res.data;
-                // eslint-disable-next-line no-console
-                console.log('Data: ', res.data);
-              })
-              .catch (function(error) {
-                // eslint-disable-next-line no-console
-                console.log('Error: ', error);
-              });
-    },
+    created () {
+      fetch('https://jsonplaceholder.typicode.com/posts')
+              .then(res => res.json())
+              .then(data => (this.posts = data));
+    }
   });
 </script>
 
