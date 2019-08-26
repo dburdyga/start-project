@@ -4,7 +4,7 @@ import Buefy from 'buefy'
 import store from './store'
 import './shared/interceptors/loading'
 import 'bulma/css/bulma.css'
-import './styles/styles.scss'
+import './styles/styles.scss';
 import 'buefy/dist/buefy.css'
 
 Vue.use(Buefy);
