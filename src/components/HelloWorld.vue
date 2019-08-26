@@ -34,9 +34,10 @@
       };
     },
     computed: {
+      // смешиваем результат mapGetters с внешним объектом computed
       ...mapGetters({
         loading: GET_LOADING_STATE,
-      }),
+      }), 
     },
     created() {
       const self = this;
@@ -55,7 +56,6 @@
   });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   p {
     text-align: left;
