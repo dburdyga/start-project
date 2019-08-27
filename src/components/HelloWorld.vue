@@ -46,16 +46,9 @@
       // обработка опций завершена, есть доступ к свойствам data
       const self = this;
       axios.get('https://jsonplaceholder.typicode.com/posts')
-              .then (function(res) {
-                self.posts = res.data;
+              .then ((res) => self.posts = res.data)
                 // Коллбэк относится к переменной `self`, значением которой является ожидаемый объект
-                // eslint-disable-next-line no-console
-                console.log('Data: ', res.data);
-              })
-              .catch (function(error) {
-                // eslint-disable-next-line no-console
-                console.log('Error: ', error);
-              });
+              .catch ((error) => console.log('Error: ', error));
     },
   });
 </script>
