@@ -8,9 +8,11 @@ interface ILoadingState {
 
 const loadingState: Module<ILoadingState, {}> = {
     state: {
+        // состояние данных приложения
         loading: [],
     },
     mutations: {
+        // синхронные изменения
         [INCREMENT_LOADING_STATE](state, loading: string) {
             state.loading.push(loading);
         },
@@ -19,6 +21,7 @@ const loadingState: Module<ILoadingState, {}> = {
         },
     },
     getters: {
+        // возвращает вычисляемые данные текущего состояния хранилища компоненту
         [GET_LOADING_STATE]: (state) => Boolean(state.loading.length),
     },
 };
