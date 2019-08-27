@@ -13,7 +13,7 @@ const loadingState: Module<ILoadingState, {}> = {
         loading: [],
     },
     mutations: {
-        // синхронные изменения
+        // синхронное изменения состояния
         [INCREMENT_LOADING_STATE](state, loading: string) {
             state.loading.push(loading);
         },
