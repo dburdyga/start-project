@@ -14,6 +14,8 @@
       </div>
     </div>
       <b-loading :active.sync="loading"/>
+<!--      модификатор sync, который позволяет сократить код использования событий,-->
+<!--      двухстороннее связывание-->
   </div>
 </template>
 
@@ -46,7 +48,7 @@
       axios.get('https://jsonplaceholder.typicode.com/posts')
               .then (function(res) {
                 self.posts = res.data;
-                // Коллбэк относится к переменной `self`, значением которой является ожидаемый объект.
+                // Коллбэк относится к переменной `self`, значением которой является ожидаемый объект
                 // eslint-disable-next-line no-console
                 console.log('Data: ', res.data);
               })

@@ -3,6 +3,7 @@ import {GET_LOADING_STATE} from './getter-types';
 import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from './mutation-types';
 
 interface ILoadingState {
+    // для адаптации под строгую типизацию
     loading: string[];
 }
 
