@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="logo" alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Request using Axios"/>
+    <HelloWorld msg="Request using Fetch"/>
   </div>
 </template>
 
