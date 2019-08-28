@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <img class="logo" alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Request using Fetch"/>
+    <HelloWorld />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from './components/Posts.vue';
 
 export default Vue.extend({
   name: 'app',

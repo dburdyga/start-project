@@ -1,7 +1,10 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div class="card" v-for="post in posts" :key="post.id">
+  <div class="posts">
+    <h1 class="header">Request using Fetch</h1>
+    <div class="card"
+         v-for="post in posts"
+         :key="post.id"
+    >
       <div class="card-content">
         <div class="media">
           <div class="media-content">
@@ -20,9 +23,6 @@
   import Vue from 'vue';
 
   export default Vue.extend({
-    props: {
-      msg: String,
-    },
     data() {
       return {
         posts: [],
@@ -36,21 +36,17 @@
   });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  p {
-    text-align: left;
-  }
   .card {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
+    text-align: left;
   }
-  h1 {
+  .header {
     font-size: 28px;
     font-weight: bold;
     color: #41b883;
     margin-bottom: 10px;
   }
-
 </style>
