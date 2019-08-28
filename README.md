@@ -1,4 +1,4 @@
-# start-project
+# Project with request using Fetch library
 
 ## Project setup
 ```
