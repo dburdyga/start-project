@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import loading from '../src/store/loading';
+import loading from './loading';
 
 Vue.use(Vuex);
 

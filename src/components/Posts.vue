@@ -1,7 +1,11 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div class="card" v-for="post in posts" :key="post.id">
+  <div class="posts">
+    <b-loading :active.sync="loading"/>
+    <h1 class="header">Request using Axios</h1>
+    <div class="card"
+         v-for="post in posts"
+         :key="post.id"
+    >
       <div class="card-content">
         <div class="media">
           <div class="media-content">
@@ -13,7 +17,6 @@
         </div>
       </div>
     </div>
-      <b-loading :active.sync="loading"/>
   </div>
 </template>
 
@@ -38,24 +41,21 @@
       }),
     },
     created() {
-      const self = this;
       axios.get('https://jsonplaceholder.typicode.com/posts')
-              .then ((res) => self.posts = res.data)
+              .then ((res) => this.posts = res.data)
               .catch ((error) => console.log('Error: ', error));
     },
   });
 </script>
 
 <style scoped lang="scss">
-  p {
-    text-align: left;
-  }
   .card {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
+    text-align: left;
   }
-  h1 {
+  .header {
     font-size: 28px;
     font-weight: bold;
     color: #41b883;

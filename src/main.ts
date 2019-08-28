@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Buefy from 'buefy'
-import store from './store'
+import store from './store/store'
 import './interceptors/loading'
 import 'bulma/css/bulma.css'
 import 'buefy/dist/buefy.css'
