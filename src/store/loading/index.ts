@@ -3,17 +3,14 @@ import {GET_LOADING_STATE} from './getter-types';
 import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from './mutation-types';
 
 interface ILoadingState {
-    // для адаптации под строгую типизацию
     loading: string[];
 }
 
 const loadingState: Module<ILoadingState, {}> = {
     state: {
-        // состояние данных приложения
         loading: [],
     },
     mutations: {
-        // синхронное изменения состояния
         [INCREMENT_LOADING_STATE](state, loading: string) {
             state.loading.push(loading);
         },
@@ -22,7 +19,6 @@ const loadingState: Module<ILoadingState, {}> = {
         },
     },
     getters: {
-        // возвращает вычисляемые данные текущего состояния хранилища компоненту
         [GET_LOADING_STATE]: (state) => Boolean(state.loading.length),
     },
 };

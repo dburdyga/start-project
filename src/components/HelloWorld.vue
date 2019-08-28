@@ -14,11 +14,8 @@
       </div>
     </div>
       <b-loading :active.sync="loading"/>
-<!--      модификатор sync, который позволяет сократить код использования событий,-->
-<!--      двухстороннее связывание-->
   </div>
 </template>
-
 
 <script lang="ts">
   import Vue from 'vue';
@@ -32,22 +29,18 @@
     },
     data() {
       return {
-        // входные параметры
         posts: [],
       };
     },
     computed: {
-      // получение доступа к элементам списка постов внутри компонента
       ...mapGetters({
         loading: GET_LOADING_STATE,
       }),
     },
     created() {
-      // обработка опций завершена, есть доступ к свойствам data
       const self = this;
       axios.get('https://jsonplaceholder.typicode.com/posts')
               .then ((res) => self.posts = res.data)
-                // Коллбэк относится к переменной `self`, значением которой является ожидаемый объект
               .catch ((error) => console.log('Error: ', error));
     },
   });
@@ -68,5 +61,4 @@
     color: #41b883;
     margin-bottom: 10px;
   }
-
 </style>
