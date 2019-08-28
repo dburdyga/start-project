@@ -13,15 +13,12 @@
         </div>
       </div>
     </div>
-      <b-loading :active.sync="loading"/>
   </div>
 </template>
 
-
 <script lang="ts">
   import Vue from 'vue';
-  import {mapGetters} from 'vuex';
-  import {GET_LOADING_STATE} from '@/store/loading/getter-types';
+
   export default Vue.extend({
     props: {
       msg: String,
@@ -30,11 +27,6 @@
       return {
         posts: [],
       };
-    },
-    computed: {
-      ...mapGetters({
-        loading: GET_LOADING_STATE,
-      }),
     },
     created () {
       fetch('https://jsonplaceholder.typicode.com/posts')
