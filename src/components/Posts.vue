@@ -27,9 +27,6 @@
   import {GET_LOADING_STATE} from '@/store/loading/getter-types';
 
   export default Vue.extend({
-    props: {
-      msg: String,
-    },
     data() {
       return {
         posts: [],
